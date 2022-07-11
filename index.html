@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3a9f60b233.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <title>Music Player By Stormy</title>
+</head>
+<body>
+
+    <div id="app-container">
+        <div id="main-container">
+    
+            <header>
+                <nav id="navbar">
+                    <a id='genres-in-navbar'href="#">Stormy Music <i class="fa-solid fa-music"></i></a>
+    
+                    <ul id="navbar-menu">
+                        <li class="navbar-item">
+                            <a href="#" class="navbar-item-link">Jazz</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a href="#" class="navbar-item-link">Pop</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a href="#" class="navbar-item-link">R&B</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a href="#" class="navbar-item-link">Alternative</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a href="#" class="navbar-item-link">Hip Hop</a>
+                        </li>
+                    </ul>
+    
+                    <div id="hamburger-menu">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                </nav>
+            </header>
+    
+            <div id="music-container">
+                <div id="pic-container">
+                    <img src="./images/Jazz/i-wanna-be-evil.jpg" alt="Image corresponding to music" id="audio-pic">
+                </div>
+        
+                <div id="details-container">
+                    <p id="song-title">Song Title</p>
+                    <p id="artist">Artist</p>
+                </div>
+    
+                <div id="player-container">
+                    <div id="progress-bar-container">
+                        <div id="progress-bar"></div>
+                    </div>
+        
+                    <audio controls id="audio" type="audio/mpeg"> 
+                        <source src="./music/Alternative/give-me-one-reason-chapman.mp3">
+                        Your browser does not support Audio</audio>
+                </div>
+    
+            </div>
+    
+    
+        </div>
+    
+        <footer>&copy;StormyWeatherCreations, 2022</footer>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

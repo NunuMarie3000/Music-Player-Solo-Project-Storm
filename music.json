@@ -1,0 +1,162 @@
+{
+    "alternative":[
+        {
+        "title":"Give Me One Reason",
+        "artist":"Tracy Chapman",
+        "image-source":"./images/Alternative/give-me-one-reason.jpg",
+        "music-source":"./music/Alternative/give-me-one-reason-chapman.mp3"
+        },
+        {
+        "title":"Kiss",
+        "artist":"Prince",
+        "image-source":"./images/Alternative/kiss.jpg",
+        "music-source":"./music/Alternative/kiss-prince.mp3"
+        },
+        {
+        "title":"Nutbush",
+        "artist":"Tina Turner",
+        "image-source":"./images/Alternative/nutbush.jpg",
+        "music-source":"./music/Alternative/nutbush-turner.mp3"
+        },
+        {
+        "title":"Rage",
+        "artist":"Rico Nasty",
+        "image-source":"./images/Alternative/arage.jpg",
+        "music-source":"./music/Alternative/rage-riconasty.mp3"
+        },
+        {
+        "title":"STFU",
+        "artist":"Rico Nasty",
+        "image-source":"./images/Alternative/stfu.jpg",
+        "music-source":"./music/Alternative/stfu-riconasty.mp3"
+        }
+    ],
+    "hiphop":[
+        {
+        "title":"Blick Blick",
+        "artist":"Coi Leray and Nicki Minaj",
+        "image-source":"./images/HipHop/blick-blick.jpg",
+        "music-source":"./music/HipHop/blick-blick-leray.mp3"
+        },
+        {
+        "title":"Captain Hook",
+        "artist":"Megan Thee Stallion",
+        "image-source":"./images/HipHop/captain-hook.jpg",
+        "music-source":"./music/HipHop/captain-hook-megan.mp3"
+        },
+        {
+        "title":"First Class",
+        "artist":"Jack Harlow",
+        "image-source":"./images/HipHop/first-class.jpg",
+        "music-source":"./music/HipHop/first-class-harlow.mp3"
+        },
+        {
+        "title":"Industry Baby",
+        "artist":"Lil Nas X",
+        "image-source":"./images/HipHop/industry-baby.jpg",
+        "music-source":"./music/HipHop/industry-baby-nasx.mp3"
+        },
+        {
+        "title":"Montero",
+        "artist":"Lil Nas X",
+        "image-source":"./images/HipHop/montero.jpg",
+        "music-source":"./music/HipHop/montero-nasx.mp3"
+        }
+    ],
+    "jazz":[
+        {
+        "title":"Angel Eyes",
+        "artist":"Ella Fitzgerald",
+        "image-source":"./images/Jazz/angel-eyes.jpg",
+        "music-source":"./music/Jazz/angel-eyes-fitzgerald.mp3"
+        },
+        {
+        "title": "Fly Me to the Moon",
+        "artist": "Frank Sinatra",
+        "image-source":"./images/Jazz/fly-me-to-the-moon.jpg",
+        "music-source":"./music/Jazz/fly-me-to-the-moon-sinatra.mp3"
+        },
+        {
+        "title":"I Wanna Be Evil",
+        "artist":"Eartha Kitt",
+        "image-source":"./images/Jazz/i-wanna-be-evil.jpg",
+        "music-source":"./music/Jazz/i-wanna-be-evil-kitt.mp3"
+        },
+        {
+        "title":"Lilac Wine",
+        "artist":"Nina Simone",
+        "image-source":"./images/Jazz/lilac-wine.jpg",
+        "music-source":"./music/Jazz/lilac-wine-simone.mp3"
+        },
+        {
+        "title":"Love Me or Leave Me",
+        "artist":"Nina Simone",
+        "image-source":"./images/Jazz/love-me-or-leave-me.jpg",
+        "music-source":"./music/Jazz/love-me-or-leave-me-simone.mp3"
+        }
+    ],
+    "pop":[
+        {
+        "title":"Calling All the Monsters",
+        "artist":"China Anne McClain",
+        "image-source":"./images/Pop/calling-all-the-monsters.jpg",
+        "music-source":"./music/Pop/calling-all-the-monsters-mcclain.mp3"
+        },
+        {
+        "title":"Everybody",
+        "artist":"Backstreet Boys",
+        "image-source":"./images/Pop/everybody.jpg",
+        "music-source":"./music/Pop/everybody-backstreetboys"
+        },
+        {
+        "title":"Motivation",
+        "artist":"Normani",
+        "image-source":"./images/Pop/motivation.png",
+        "music-source":"./music/Pop/motivation-normani.mp3"
+        },
+        {
+        "title":"Pocket Full of Sunshine",
+        "artist":"Natasha Bedingfield",
+        "image-source":"./images/Pop/pocket-full-of-sunshine.jpg",
+        "music-source":"./music/Pop/pocket-full-of-sunshine-bedingfield.mp3"
+        },
+        {
+        "title":"What Dreams Are Made Of",
+        "artist":"Hilary Duff",
+        "image-source":"./images/Pop/what-dreams-are-made-of.png",
+        "music-source":"./music/Pop/what-dreams-are-made-of-duff.mp3"
+        }
+    ],
+    "r&b":[
+        {
+        "title":"Bad Blood",
+        "artist":"Nao",
+        "image-source":"./images/R&B/bad-blood.jpg",
+        "music-source":"./music/R&B/bad-blood-nao.mp3"
+        },
+        {
+        "title":"Magic",
+        "artist":"Rico Nasty",
+        "image-source":"./images/R&B/magic.jpg",
+        "music-source":"./music/R&B/magic-riconasty.mp3"
+        },
+        {
+        "title":"Single AF",
+        "artist":"Foushee",
+        "image-source":"./images/R&B/single-af.jpg",
+        "music-source":"./music/R&B/single-af-foushee.mp3"
+        },
+        {
+        "title":"Smokin' Out the Window",
+        "artist":"Silk Sonic",
+        "image-source":"./images/R&B/smokin-out-the-window.jpg",
+        "music-source":"./music/R&B/smokin-out-the-window-silksonic.mp3"
+        },
+        {
+        "title":"Vegas",
+        "artist":"Doja Cat",
+        "image-source":"./images/R&B/vegas.jpg",
+        "music-source":"./music/R&B/vegas-dojacat.mp3"
+        }
+    ]
+}
