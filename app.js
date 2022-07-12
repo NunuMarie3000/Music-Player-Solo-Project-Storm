@@ -278,4 +278,3 @@ let getAndUseMusicJson = fetch('./music.json').then((response)=>{
         //to do that, the genre is already in its own array in the json file, just iterate through that array to autoplay the next song
 
 //keep your code clean and readable...
-
