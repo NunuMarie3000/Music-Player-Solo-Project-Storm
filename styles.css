@@ -41,7 +41,6 @@ li{
 a{
     color: #fff;
     text-decoration: none;
-
 }
 #navbar{
     min-height: 70px;
@@ -80,8 +79,6 @@ a{
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
     background-color: #fff;
 }
 
@@ -100,6 +97,7 @@ a{
         width: 100%;
         text-align: center;
         transition: 0.3s;
+        z-index: 1;
     }
 
     .navbar-item{
@@ -110,9 +108,39 @@ a{
     }
 
     img{
-        height: 20vh;
-        width: 35vw;
+        height: 180px;
+        width: 150px;
     }
+
+    /* .genre-modal-container.show{
+        right: 13vw;
+    }
+    .info-container{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .one{
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    .two{
+        grid-row: 1/2;
+        grid-column: 2/3;
+    }
+    .three{
+        grid-row: 2/3;
+        grid-column: 1/2;
+    } 
+    .four{
+        grid-row: 2/3;
+        grid-column: 2/3;
+    }
+    .five{
+        grid-row: 3/4;
+        grid-column: 1/2;
+    } */
 }
 
 #music-container{
@@ -130,3 +158,72 @@ img{
     border-width: 3px;
     border-color: rgb(249, 156, 65);
 }
+
+
+.genre-modal-container{
+    position: fixed;
+    transition: 0.7s ease;
+    right: -300%;
+    text-align: center;
+    color: #fff;
+    background-color: rgb(71, 141, 255);
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(249, 156, 65);
+    margin: 70px 0 0 0;
+    padding: 10px;
+    border-radius: 5%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.genre-modal-container.show{
+    transition: 0.7s ease;
+    right: 23vw;
+}
+
+.modal-music-item >img:hover{
+    cursor: pointer;
+}
+
+.info-container{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.one{
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+.two{
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+.three{
+    grid-row: 1/2;
+    grid-column: 3/4;
+} 
+.four{
+    grid-area: 2/1/3/2;
+}
+.five{
+    grid-area: 2/2/3/3;
+} 
+
+.modal-music-item img{
+    width: 100px;
+    height: 100px;
+}
+.modal-music-item{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* .genre-modal-container{
+    display:none;
+} */
+
