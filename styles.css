@@ -5,8 +5,13 @@
 }
 
 body{
-    background-color:  rgb(71, 143, 255);
+    background: linear-gradient(rgb(54, 5, 58), rgb(229, 26, 183));
     font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    color: rgba(255, 255, 255, 0.906);
+    text-align: right;
 }
 
 #app-container{
@@ -14,20 +19,16 @@ body{
 }
 
 #main-container{
-    background-color: white;
     display: flex;
     flex-direction: column;
     margin: 10vh 3vw 0 3vw;
 }
 
-header{
-    background-color:rgb(193, 93, 233);
-}
 footer{
-    background-color: rgb(193, 93, 233);
     margin: 0 3vw 10vh 3vw;
     padding: 2vh;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: right;
 }
 
 i{
@@ -45,7 +46,7 @@ a{
 #navbar{
     min-height: 70px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     padding: 0 24px;
 }
@@ -93,7 +94,6 @@ a{
         top: 90px;
         gap: 0;
         flex-direction: column;
-        background-color: rgb(71, 143, 255);
         width: 100%;
         text-align: center;
         transition: 0.3s;
@@ -130,7 +130,7 @@ img{
     border-radius: 10%;
     border-style: solid;
     border-width: 3px;
-    border-color: rgb(249, 156, 65);
+    border-color: rgba(0, 0, 0, 0.4);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
 }
 
@@ -140,16 +140,13 @@ img{
     top: 0;
     bottom:0;
     overflow-y:scroll;
-    overflow-x:hidden;
     overflow: auto;
     transition: 0.7s ease;
     right: -300%;
     text-align: center;
     color: #fff;
-    background-color: rgb(71, 141, 255);
-    border-style: solid;
-    border-width: 5px;
-    border-color: rgb(249, 156, 65);
+    background: linear-gradient(rgb(54, 5, 58), rgb(229, 26, 183));
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
     margin: 70px 0 0 0;
     padding: 10px;
     border-radius: 5%;
@@ -162,10 +159,6 @@ img{
 .genre-modal-container.show{
     transition: 0.7s ease;
     right: 30px;
-}
-
-.modal-music-item >img:hover{
-    cursor: pointer;
 }
 
 .info-container{
@@ -199,10 +192,18 @@ img{
 .modal-music-item img{
     width: 100px;
     height: 100px;
+    margin: 0 10px;
 }
 .modal-music-item{
     margin-bottom: 20px;
     text-align: center;
+    transition: 0.7s ease;
+}
+.modal-music-item:hover{
+    cursor: pointer;
+    background-color: rgba(53, 5, 58, 0.2);
+    border-radius: 5%;
+    margin: auto;
 }
 
 #pic-container{
@@ -221,12 +222,12 @@ img{
 #music-container{
     margin: 20px auto;
     padding: 0 10px;
-    background-color: rgba(53, 5, 58, 0.927);
+    background-color: rgba(53, 5, 58, 0.58);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
     border-radius: 4%;
     color: #fff;
 }
 audio{
-    margin: auto;
+    margin: auto auto 10px auto;
     padding: 0 5px;
 }
