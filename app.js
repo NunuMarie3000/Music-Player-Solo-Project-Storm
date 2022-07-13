@@ -6,6 +6,8 @@ let songTitle = document.getElementById('song-title');
 let artist = document.getElementById('artist');
 let songSource = document.getElementById('audio');
 let playingImage = document.getElementById('playing-image');
+let printGenreIdHere = document.getElementById('put-id-here');
+//console.log(printGenreIdHere.getAttribute('name'));
 //NOTE: THIS IS HOW TO SET SRC TO SONGSOURCE
 //songSource.setAttribute('src', 'music/Alternative/stfu-riconasty.mp3');
 
@@ -104,12 +106,15 @@ let getAndUseMusicJson = fetch('./music.json').then((response)=>{
         // console.log(images);
 
         document.querySelectorAll('div.modal-music-item > img').forEach(modalImg => modalImg.addEventListener('click', ()=>{
+            songSource.setAttribute('autoplay', '');
             // console.log(modalImg);
             // console.log(modalImg.id);
             // check if the modalImg has jazz class
             // if it does, then go through data.jazz, 
             //if modalImg.id = data.jazz.id, sontTitle.textContent = data.jazz.title, artist.textContent = data.jazz.artist, songSource.textContent = data.jazz.music-source, playingImage.textContent = data.jazz.image-source
             if(modalImg.classList.contains('jazz')){
+                //print genre id so i can access and check later
+                printGenreIdHere.setAttribute('name','jazz');
                 //if it's a jazz item, check what modalImage.id is, and correspond the data that way
                 if(modalImg.id === 'fitzgerald'){
                     songTitle.textContent = data.jazz[0].title;
@@ -142,6 +147,7 @@ let getAndUseMusicJson = fetch('./music.json').then((response)=>{
                     playingImage.setAttribute('src', `${data.jazz[4].imageSource}`);
                 }
             }else if(modalImg.classList.contains('alternative')){
+                printGenreIdHere.setAttribute('name','alternative');
                 if(modalImg.id === 'chapman'){
                     songTitle.textContent = data.alternative[0].title;
                     artist.textContent = data.alternative[0].artist;
@@ -173,6 +179,7 @@ let getAndUseMusicJson = fetch('./music.json').then((response)=>{
                     playingImage.setAttribute('src', `${data.alternative[4].imageSource}`);
                 }
             }else if(modalImg.classList.contains('hiphop')){
+                printGenreIdHere.setAttribute('name','hiphop');
                 if(modalImg.id === 'leray'){
                     songTitle.textContent = data.hiphop[0].title;
                     artist.textContent = data.hiphop[0].artist;
@@ -204,6 +211,7 @@ let getAndUseMusicJson = fetch('./music.json').then((response)=>{
                     playingImage.setAttribute('src', `${data.hiphop[4].imageSource}`);
                 }
             }else if(modalImg.classList.contains('pop')){
+                printGenreIdHere.setAttribute('name','popMusic');
                 if(modalImg.id === 'mcclain'){
                     songTitle.textContent = data.popMusic[0].title;
                     artist.textContent = data.popMusic[0].artist;
@@ -235,6 +243,7 @@ let getAndUseMusicJson = fetch('./music.json').then((response)=>{
                     playingImage.setAttribute('src', `${data.popMusic[4].imageSource}`);
                 }
             }else{
+                printGenreIdHere.setAttribute('name','rb');
                 if(modalImg.id === 'nao'){
                     songTitle.textContent = data.rb[0].title;
                     artist.textContent = data.rb[0].artist;
@@ -269,6 +278,75 @@ let getAndUseMusicJson = fetch('./music.json').then((response)=>{
         }));
     }
     populateImage();
+    //I think i need to create a function to loop through genres, before looping through all songs, regardless of genre
+    //to loop through songs in genre, it's already array format in json file, so json.parse(data) to get the array, then, maybe , ex: let altArray = data.alternative;, then altArray.forEach(songProp =>{})
+    let alternativeArray = data.alternative;
+    let hiphopArray = data.hiphop;
+    let popMusicArray = data.popMusic;
+    let rbArray = data.rb;
+    let jazArray = data.jazz;
+    let newAltArray = [];
+
+    // if(printGenreIdHere.name === 'alternative'){
+        //     alternativeArray.forEach(obj =>{
+        //         //so, now that i can access each song object in the alternative array, i need to set the main song's information to the object's property values, but only after a song is done playing, add event listener to the audio(songSource), so that when it ends, it populates and plays
+        //         songSource.addEventListener('ended', ()=>{
+                //console.log('song ended');
+            //})
+        //     })
+        // }
+    let loopAlternative = ()=>{
+        newAltArray.push(alternativeArray.shift());
+        newAltArray.forEach(arrObj =>{
+            songTitle.textContent = arrObj.title;
+            artist.textContent = arrObj.artist;
+            songSource.setAttribute('src', `${arrObj.musicSource}`);
+            playingImage.setAttribute('src', `${arrObj.imageSource}`);
+        });
+        if(songSource.getAttribute('src') === 'music/Alternative/stfu-riconasty.mp3'){
+            songTitle.textContent = alternativeArray[0].title;
+            artist.textContent = alternativeArray[0].artist;
+            songSource.setAttribute('src', `${alternativeArray[0].musicSource}`);
+            playingImage.setAttribute('src', `${alternativeArray[0].imageSource}`);
+        }
+    };
+    // let loopHiphop = ()=>{
+
+    // }
+    // let loopPopMusic = ()=>{
+
+    // }
+    // let loopRb = ()=>{
+
+    // }
+    // let loopJazz = ()=>{
+
+    // }
+    let loopThroughGenre = ()=>{
+        //okay, before i can loop through these genres, i need to know what song is playing/what genre the user is playing from
+        //NOTE: i did this by creating div with id='print-id-here' and set its name attribute to whatever genre the user is listening to
+        //so, i need to first check what the div's(printGenreIdHere) name is, then loop through the array that follows
+        //i need to check the id of what's playing and move accordingly
+        //i could check the id of the img that the user is viewing 
+        //so, printGenreIdHere.getAttribute('name')
+        songSource.addEventListener('ended', ()=>{
+            if(printGenreIdHere.getAttribute('name') === 'alternative'){
+                loopAlternative();
+                
+            // }else if(printGenreIdHere.getAttribute('name') === 'hiphop'){
+            //     loopHiphop();
+            // }else if(printGenreIdHere.getAttribute('name') === 'popMusic'){
+            //     loopPopMusic();
+            // }else if(printGenreIdHere.getAttribute('name') === 'rb'){
+            //     loopRb();
+            }else{
+                //loopJazz();
+                console.log('space filler');
+            }
+        })
+
+    }
+    loopThroughGenre();
 }).catch((err)=>{
     console.log('rejected', err);
 });

@@ -5,35 +5,40 @@
         "title":"Give Me One Reason",
         "artist":"Tracy Chapman",
         "imageSource":"./images/Alternative/give-me-one-reason.jpg",
-        "musicSource":"./music/Alternative/give-me-one-reason-chapman.mp3"
+        "musicSource":"./music/Alternative/give-me-one-reason-chapman.mp3",
+        "genre":"alternative"
         },
         {
         "id":"prince",
         "title":"Kiss",
         "artist":"Prince",
         "imageSource":"./images/Alternative/kiss.jpg",
-        "musicSource":"./music/Alternative/kiss-prince.mp3"
+        "musicSource":"./music/Alternative/kiss-prince.mp3",
+        "genre":"alternative"
         },
         {
         "id":"turner",
         "title":"Nutbush",
         "artist":"Tina Turner",
         "imageSource":"./images/Alternative/nutbush.jpg",
-        "musicSource":"./music/Alternative/nutbush-turner.mp3"
+        "musicSource":"./music/Alternative/nutbush-turner.mp3",
+        "genre":"alternative"
         },
         {
         "id":"rage-riconasty",
         "title":"Rage",
         "artist":"Rico Nasty",
         "imageSource":"./images/Alternative/rage.jpg",
-        "musicSource":"./music/Alternative/rage-riconasty.mp3"
+        "musicSource":"./music/Alternative/rage-riconasty.mp3",
+        "genre":"alternative"
         },
         {
         "id":"stfu-riconasty",
         "title":"STFU",
         "artist":"Rico Nasty",
         "imageSource":"./images/Alternative/stfu.jpg",
-        "musicSource":"./music/Alternative/stfu-riconasty.mp3"
+        "musicSource":"./music/Alternative/stfu-riconasty.mp3",
+        "genre":"alternative"
         }
     ],
     "hiphop":[
@@ -42,35 +47,40 @@
         "title":"Blick Blick",
         "artist":"Coi Leray and Nicki Minaj",
         "imageSource":"./images/HipHop/blick-blick.jpg",
-        "musicSource":"./music/HipHop/blick-blick-leray.mp3"
+        "musicSource":"./music/HipHop/blick-blick-leray.mp3",
+        "genre":"hiphop"
         },
         {
         "id":"megan",
         "title":"Captain Hook",
         "artist":"Megan Thee Stallion",
         "imageSource":"./images/HipHop/captain-hook.jpg",
-        "musicSource":"./music/HipHop/captain-hook-megan.mp3"
+        "musicSource":"./music/HipHop/captain-hook-megan.mp3",
+        "genre":"hiphop"
         },
         {
         "id":"harlow",
         "title":"First Class",
         "artist":"Jack Harlow",
         "imageSource":"./images/HipHop/first-class.jpg",
-        "musicSource":"./music/HipHop/first-class-harlow.mp3"
+        "musicSource":"./music/HipHop/first-class-harlow.mp3",
+        "genre":"hiphop"
         },
         {
         "id":"industry-nasx",
         "title":"Industry Baby",
         "artist":"Lil Nas X",
         "imageSource":"./images/HipHop/industry-baby.jpg",
-        "musicSource":"./music/HipHop/industry-baby-nasx.mp3"
+        "musicSource":"./music/HipHop/industry-baby-nasx.mp3",
+        "genre":"hiphop"
         },
         {
         "id":"montero-nasx",
         "title":"Montero",
         "artist":"Lil Nas X",
         "imageSource":"./images/HipHop/montero.jpg",
-        "musicSource":"./music/HipHop/montero-nasx.mp3"
+        "musicSource":"./music/HipHop/montero-nasx.mp3",
+        "genre":"hiphop"
         }
     ],
     "jazz":[
@@ -79,35 +89,40 @@
         "title":"Angel Eyes",
         "artist":"Ella Fitzgerald",
         "imageSource":"./images/Jazz/angel-eyes.jpg",
-        "musicSource":"./music/Jazz/angel-eyes-fitzgerald.mp3"
+        "musicSource":"./music/Jazz/angel-eyes-fitzgerald.mp3",
+        "genre":"jazz"
         },
         {
         "id":"sinatra",
         "title": "Fly Me to the Moon",
         "artist": "Frank Sinatra",
         "imageSource":"./images/Jazz/fly-me-to-the-moon.jpg",
-        "musicSource":"./music/Jazz/fly-me-to-the-moon-sinatra.mp3"
+        "musicSource":"./music/Jazz/fly-me-to-the-moon-sinatra.mp3",
+        "genre":"jazz"
         },
         {
         "id":"kitt",
         "title":"I Wanna Be Evil",
         "artist":"Eartha Kitt",
         "imageSource":"./images/Jazz/i-wanna-be-evil.jpg",
-        "musicSource":"./music/Jazz/i-wanna-be-evil-kitt.mp3"
+        "musicSource":"./music/Jazz/i-wanna-be-evil-kitt.mp3",
+        "genre":"jazz"
         },
         {
         "id":"wine-simone",
         "title":"Lilac Wine",
         "artist":"Nina Simone",
         "imageSource":"./images/Jazz/lilac-wine.jpg",
-        "musicSource":"./music/Jazz/lilac-wine-simone.mp3"
+        "musicSource":"./music/Jazz/lilac-wine-simone.mp3",
+        "genre":"jazz"
         },
         {
         "id":"love-simone",
         "title":"Love Me or Leave Me",
         "artist":"Nina Simone",
         "imageSource":"./images/Jazz/love-me-or-leave-me.jpg",
-        "musicSource":"./music/Jazz/love-me-or-leave-me-simone.mp3"
+        "musicSource":"./music/Jazz/love-me-or-leave-me-simone.mp3",
+        "genre":"jazz"
         }
     ],
     "popMusic":[
@@ -116,35 +131,40 @@
         "title":"Calling All the Monsters",
         "artist":"China Anne McClain",
         "imageSource":"./images/Pop/calling-all-the-monsters.jpg",
-        "musicSource":"./music/Pop/calling-all-the-monsters-mcclain.mp3"
+        "musicSource":"./music/Pop/calling-all-the-monsters-mcclain.mp3",
+        "genre":"popMusic"
         },
         {
         "id":"backstreetboys",
         "title":"Everybody",
         "artist":"Backstreet Boys",
         "imageSource":"./images/Pop/everybody.jpg",
-        "musicSource":"./music/Pop/everybody-backstreetboys.mp3"
+        "musicSource":"./music/Pop/everybody-backstreetboys.mp3",
+        "genre":"popMusic"
         },
         {
         "id":"normani",
         "title":"Motivation",
         "artist":"Normani",
         "imageSource":"./images/Pop/motivation.png",
-        "musicSource":"./music/Pop/motivation-normani.mp3"
+        "musicSource":"./music/Pop/motivation-normani.mp3",
+        "genre":"popMusic"
         },
         {
         "id":"bedingfield",
         "title":"Pocket Full of Sunshine",
         "artist":"Natasha Bedingfield",
         "imageSource":"./images/Pop/pocket-full-of-sunshine.jpg",
-        "musicSource":"./music/Pop/pocket-full-of-sunshine-bedingfield.mp3"
+        "musicSource":"./music/Pop/pocket-full-of-sunshine-bedingfield.mp3",
+        "genre":"popMusic"
         },
         {
         "id":"duff",
         "title":"What Dreams Are Made Of",
         "artist":"Hilary Duff",
         "imageSource":"./images/Pop/what-dreams-are-made-of.png",
-        "musicSource":"./music/Pop/what-dreams-are-made-of-duff.mp3"
+        "musicSource":"./music/Pop/what-dreams-are-made-of-duff.mp3",
+        "genre":"popMusic"
         }
     ],
     "rb":[
@@ -153,35 +173,40 @@
         "title":"Bad Blood",
         "artist":"Nao",
         "imageSource":"./images/R&B/bad-blood.jpg",
-        "musicSource":"./music/R&B/bad-blood-nao.mp3"
+        "musicSource":"./music/R&B/bad-blood-nao.mp3",
+        "genre":"rb"
         },
         {
         "id":"magic-riconasty",
         "title":"Magic",
         "artist":"Rico Nasty",
         "imageSource":"./images/R&B/magic.jpg",
-        "musicSource":"./music/R&B/magic-riconasty.mp3"
+        "musicSource":"./music/R&B/magic-riconasty.mp3",
+        "genre":"rb"
         },
         {
         "id":"foushee",
         "title":"Single AF",
         "artist":"Foushee",
         "imageSource":"./images/R&B/single-af.jpg",
-        "musicSource":"./music/R&B/single-af-foushee.mp3"
+        "musicSource":"./music/R&B/single-af-foushee.mp3",
+        "genre":"rb"
         },
         {
         "id":"silksonic",
         "title":"Smokin' Out the Window",
         "artist":"Silk Sonic",
         "imageSource":"./images/R&B/smokin-out-the-window.jpg",
-        "musicSource":"./music/R&B/smokin-out-the-window-silksonic.mp3"
+        "musicSource":"./music/R&B/smokin-out-the-window-silksonic.mp3",
+        "genre":"rb"
         },
         {
         "id":"dojacat",
         "title":"Vegas",
         "artist":"Doja Cat",
         "imageSource":"./images/R&B/vegas.jpg",
-        "musicSource":"./music/R&B/vegas-dojacat.mp3"
+        "musicSource":"./music/R&B/vegas-dojacat.mp3",
+        "genre":"rb"
         }
     ]
 }
