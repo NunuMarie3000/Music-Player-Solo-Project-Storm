@@ -1,7 +1,7 @@
 {
     "alternative":[
         {
-        "id":"chapman",
+        "id":"0",
         "title":"Give Me One Reason",
         "artist":"Tracy Chapman",
         "imageSource":"./images/Alternative/give-me-one-reason.jpg",
@@ -9,7 +9,7 @@
         "genre":"alternative"
         },
         {
-        "id":"prince",
+        "id":"1",
         "title":"Kiss",
         "artist":"Prince",
         "imageSource":"./images/Alternative/kiss.jpg",
@@ -17,7 +17,7 @@
         "genre":"alternative"
         },
         {
-        "id":"turner",
+        "id":"2",
         "title":"Nutbush",
         "artist":"Tina Turner",
         "imageSource":"./images/Alternative/nutbush.jpg",
@@ -25,7 +25,7 @@
         "genre":"alternative"
         },
         {
-        "id":"rage-riconasty",
+        "id":"3",
         "title":"Rage",
         "artist":"Rico Nasty",
         "imageSource":"./images/Alternative/rage.jpg",
@@ -33,7 +33,7 @@
         "genre":"alternative"
         },
         {
-        "id":"stfu-riconasty",
+        "id":"4",
         "title":"STFU",
         "artist":"Rico Nasty",
         "imageSource":"./images/Alternative/stfu.jpg",
@@ -43,7 +43,7 @@
     ],
     "hiphop":[
         {
-        "id":"leray",
+        "id":"0",
         "title":"Blick Blick",
         "artist":"Coi Leray and Nicki Minaj",
         "imageSource":"./images/HipHop/blick-blick.jpg",
@@ -51,7 +51,7 @@
         "genre":"hiphop"
         },
         {
-        "id":"megan",
+        "id":"2",
         "title":"Captain Hook",
         "artist":"Megan Thee Stallion",
         "imageSource":"./images/HipHop/captain-hook.jpg",
@@ -59,7 +59,7 @@
         "genre":"hiphop"
         },
         {
-        "id":"harlow",
+        "id":"2",
         "title":"First Class",
         "artist":"Jack Harlow",
         "imageSource":"./images/HipHop/first-class.jpg",
@@ -67,7 +67,7 @@
         "genre":"hiphop"
         },
         {
-        "id":"industry-nasx",
+        "id":"3",
         "title":"Industry Baby",
         "artist":"Lil Nas X",
         "imageSource":"./images/HipHop/industry-baby.jpg",
@@ -75,7 +75,7 @@
         "genre":"hiphop"
         },
         {
-        "id":"montero-nasx",
+        "id":"4",
         "title":"Montero",
         "artist":"Lil Nas X",
         "imageSource":"./images/HipHop/montero.jpg",
@@ -85,7 +85,7 @@
     ],
     "jazz":[
         {
-        "id":"fitzgerald",
+        "id":"0",
         "title":"Angel Eyes",
         "artist":"Ella Fitzgerald",
         "imageSource":"./images/Jazz/angel-eyes.jpg",
@@ -93,7 +93,7 @@
         "genre":"jazz"
         },
         {
-        "id":"sinatra",
+        "id":"1",
         "title": "Fly Me to the Moon",
         "artist": "Frank Sinatra",
         "imageSource":"./images/Jazz/fly-me-to-the-moon.jpg",
@@ -101,7 +101,7 @@
         "genre":"jazz"
         },
         {
-        "id":"kitt",
+        "id":"2",
         "title":"I Wanna Be Evil",
         "artist":"Eartha Kitt",
         "imageSource":"./images/Jazz/i-wanna-be-evil.jpg",
@@ -109,7 +109,7 @@
         "genre":"jazz"
         },
         {
-        "id":"wine-simone",
+        "id":"3",
         "title":"Lilac Wine",
         "artist":"Nina Simone",
         "imageSource":"./images/Jazz/lilac-wine.jpg",
@@ -117,7 +117,7 @@
         "genre":"jazz"
         },
         {
-        "id":"love-simone",
+        "id":"4",
         "title":"Love Me or Leave Me",
         "artist":"Nina Simone",
         "imageSource":"./images/Jazz/love-me-or-leave-me.jpg",
@@ -127,7 +127,7 @@
     ],
     "popMusic":[
         {
-        "id":"mcclain",
+        "id":"0",
         "title":"Calling All the Monsters",
         "artist":"China Anne McClain",
         "imageSource":"./images/Pop/calling-all-the-monsters.jpg",
@@ -135,7 +135,7 @@
         "genre":"popMusic"
         },
         {
-        "id":"backstreetboys",
+        "id":"1",
         "title":"Everybody",
         "artist":"Backstreet Boys",
         "imageSource":"./images/Pop/everybody.jpg",
@@ -143,7 +143,7 @@
         "genre":"popMusic"
         },
         {
-        "id":"normani",
+        "id":"2",
         "title":"Motivation",
         "artist":"Normani",
         "imageSource":"./images/Pop/motivation.png",
@@ -151,7 +151,7 @@
         "genre":"popMusic"
         },
         {
-        "id":"bedingfield",
+        "id":"3",
         "title":"Pocket Full of Sunshine",
         "artist":"Natasha Bedingfield",
         "imageSource":"./images/Pop/pocket-full-of-sunshine.jpg",
@@ -159,7 +159,7 @@
         "genre":"popMusic"
         },
         {
-        "id":"duff",
+        "id":"4",
         "title":"What Dreams Are Made Of",
         "artist":"Hilary Duff",
         "imageSource":"./images/Pop/what-dreams-are-made-of.png",
@@ -169,7 +169,7 @@
     ],
     "rb":[
         {
-        "id":"nao",
+        "id":"0",
         "title":"Bad Blood",
         "artist":"Nao",
         "imageSource":"./images/R&B/bad-blood.jpg",
@@ -177,7 +177,7 @@
         "genre":"rb"
         },
         {
-        "id":"magic-riconasty",
+        "id":"1",
         "title":"Magic",
         "artist":"Rico Nasty",
         "imageSource":"./images/R&B/magic.jpg",
@@ -185,7 +185,7 @@
         "genre":"rb"
         },
         {
-        "id":"foushee",
+        "id":"2",
         "title":"Single AF",
         "artist":"Foushee",
         "imageSource":"./images/R&B/single-af.jpg",
@@ -193,7 +193,7 @@
         "genre":"rb"
         },
         {
-        "id":"silksonic",
+        "id":"3",
         "title":"Smokin' Out the Window",
         "artist":"Silk Sonic",
         "imageSource":"./images/R&B/smokin-out-the-window.jpg",
@@ -201,7 +201,7 @@
         "genre":"rb"
         },
         {
-        "id":"dojacat",
+        "id":"4",
         "title":"Vegas",
         "artist":"Doja Cat",
         "imageSource":"./images/R&B/vegas.jpg",
