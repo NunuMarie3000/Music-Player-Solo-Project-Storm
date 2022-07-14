@@ -1,5 +1,6 @@
 'use strict';
 console.log('up and running');
+//keep your code clean and readable...
 
 //get elements we're gonna populate later
 let songTitle = document.getElementById('song-title');
@@ -84,14 +85,11 @@ let workingGenre = ()=>{
 workingGenre();
 //NOTE: I need to fix this later, but its buggy when the screen size is mobile sized, but works fine otherwise
 
-
-
 //NOTE: WHAT DO I WANNA DO?
 //i need to get json data so i have it to use
 
     //when the user clicks a song from that modal box, the info from that item populates the html src and img tag and automatically begins playing the song
 let getAndUseMusicJson = fetch('./music.json').then((response)=>{
-    //console.log('resolved', response);
     //response.json returns a promise
     //promises usually take a second to do and can either be rejected or resolved
     //since we're using the return keyword, the overall value of this fetch method is gonna be this response.json() data, because of this, we can chain a .then()
@@ -103,6 +101,23 @@ let getAndUseMusicJson = fetch('./music.json').then((response)=>{
     //get audio element
     let audioElement = document.querySelector('audio');
 
+    //get img element so i can pulse it with box shadow if the song is playing, ujust for the aesthetic
+    let image = document.getElementById('playing-image');
+
+    //i wanna pulse the img if the song is playing
+    let pulsateImage = ()=>{
+        setInterval(()=>{
+            image.classList.add('pulsate');
+        }, 1000);
+        setInterval(()=>{
+            image.classList.remove('pulsate');
+        }, 1500);
+    };
+    audioElement.addEventListener('playing', pulsateImage);
+
+    let stopPulsate = ()=>{
+        image.classList.remove('pulsate');
+    }
     //when the user clicks the play/pause button, if the i class contains fa-play, set it to fa-pause, if it's fa-pause, set it to fa-play
     playPause.addEventListener('click', ()=>{
         if(playPause.classList.contains('fa-play')){
@@ -113,6 +128,14 @@ let getAndUseMusicJson = fetch('./music.json').then((response)=>{
             playPause.classList.remove('fa-pause');
             playPause.classList.add('fa-play');
             audioElement.pause();
+        }
+    });
+
+    //add event listener to audioElement to fix but. if you pause a song then skip, the play/pause button stays on play and doesn't switch to pause when the song starts like it should
+    audioElement.addEventListener('play', ()=>{
+        if(playPause.classList.contains('fa-play')){
+            playPause.classList.remove('fa-play');
+            playPause.classList.add('fa-pause');
         }
     });
 
@@ -206,12 +229,6 @@ let getAndUseMusicJson = fetch('./music.json').then((response)=>{
     }
     audioElement.addEventListener('timeupdate', updateProgressBar);
 
-    //i want to update the current time of the song based on the location of the progress bar
-    //how would i do this?
-    //progressbarwidth = (currenttime/duration) * 100
-    //so...current time = (progressBarWidth/100) * duration
-
-
     let populateImage = ()=>{
         //add event listeners to all img in modal boxes
         //when the user clicks a specific image, that's how we'll get the info to populate with
@@ -236,35 +253,30 @@ let getAndUseMusicJson = fetch('./music.json').then((response)=>{
                 printGenreIdHere.setAttribute('name','jazz');
                 //if it's a jazz item, check what modalImage.id is, and correspond the data that way
                 if(modalImg.id === 'fitzgerald'){
-                    printGenreIdHere.textContent = 0;
                     songTitle.textContent = data.jazz[0].title;
                     artist.textContent = data.jazz[0].artist;
                     songSource.setAttribute('src', `${data.jazz[0].musicSource}`);
                     playingImage.setAttribute('src', `${data.jazz[0].imageSource}`);
                 }
                 else if(modalImg.id === 'sinatra'){
-                    printGenreIdHere.textContent = 1;
                     songTitle.textContent = data.jazz[1].title;
                     artist.textContent = data.jazz[1].artist;
                     songSource.setAttribute('src', `${data.jazz[1].musicSource}`);
                     playingImage.setAttribute('src', `${data.jazz[1].imageSource}`);
                 }
                 else if(modalImg.id === 'kitt'){
-                    printGenreIdHere.textContent = 2;
                     songTitle.textContent = data.jazz[2].title;
                     artist.textContent = data.jazz[2].artist;
                     songSource.setAttribute('src', `${data.jazz[2].musicSource}`);
                     playingImage.setAttribute('src', `${data.jazz[2].imageSource}`);
                 }
                 else if(modalImg.id === 'wine-simone'){
-                    printGenreIdHere.textContent = 3;
                     songTitle.textContent = data.jazz[3].title;
                     artist.textContent = data.jazz[3].artist;
                     songSource.setAttribute('src', `${data.jazz[3].musicSource}`);
                     playingImage.setAttribute('src', `${data.jazz[3].imageSource}`);
                 }
                 else{
-                    printGenreIdHere.textContent = 4;
                     songTitle.textContent = data.jazz[4].title;
                     artist.textContent = data.jazz[4].artist;
                     songSource.setAttribute('src', `${data.jazz[4].musicSource}`);
@@ -273,35 +285,30 @@ let getAndUseMusicJson = fetch('./music.json').then((response)=>{
             }else if(modalImg.classList.contains('alternative')){
                 printGenreIdHere.setAttribute('name','alternative');
                 if(modalImg.id === 'chapman'){
-                    printGenreIdHere.textContent = 0;
                     songTitle.textContent = data.alternative[0].title;
                     artist.textContent = data.alternative[0].artist;
                     songSource.setAttribute('src', `${data.alternative[0].musicSource}`);
                     playingImage.setAttribute('src', `${data.alternative[0].imageSource}`);
                 }
                 else if(modalImg.id === 'prince'){
-                    printGenreIdHere.textContent = 1;
                     songTitle.textContent = data.alternative[1].title;
                     artist.textContent = data.alternative[1].artist;
                     songSource.setAttribute('src', `${data.alternative[1].musicSource}`);
                     playingImage.setAttribute('src', `${data.alternative[1].imageSource}`);
                 }
                 else if(modalImg.id === 'turner'){
-                    printGenreIdHere.textContent = 2;
                     songTitle.textContent = data.alternative[2].title;
                     artist.textContent = data.alternative[2].artist;
                     songSource.setAttribute('src', `${data.alternative[2].musicSource}`);
                     playingImage.setAttribute('src', `${data.alternative[2].imageSource}`);
                 }
                 else if(modalImg.id === 'rage-riconasty'){
-                    printGenreIdHere.textContent = 3;
                     songTitle.textContent = data.alternative[3].title;
                     artist.textContent = data.alternative[3].artist;
                     songSource.setAttribute('src', `${data.alternative[3].musicSource}`);
                     playingImage.setAttribute('src', `${data.alternative[3].imageSource}`);
                 }
                 else{
-                    printGenreIdHere.textContent = 4;
                     songTitle.textContent = data.alternative[4].title;
                     artist.textContent = data.alternative[4].artist;
                     songSource.setAttribute('src', `${data.alternative[4].musicSource}`);
@@ -310,35 +317,30 @@ let getAndUseMusicJson = fetch('./music.json').then((response)=>{
             }else if(modalImg.classList.contains('hiphop')){
                 printGenreIdHere.setAttribute('name','hiphop');
                 if(modalImg.id === 'leray'){
-                    printGenreIdHere.textContent = 0;
                     songTitle.textContent = data.hiphop[0].title;
                     artist.textContent = data.hiphop[0].artist;
                     songSource.setAttribute('src', `${data.hiphop[0].musicSource}`);
                     playingImage.setAttribute('src', `${data.hiphop[0].imageSource}`);
                 }
                 else if(modalImg.id === 'megan'){
-                    printGenreIdHere.textContent = 1;
                     songTitle.textContent = data.hiphop[1].title;
                     artist.textContent = data.hiphop[1].artist;
                     songSource.setAttribute('src', `${data.hiphop[1].musicSource}`);
                     playingImage.setAttribute('src', `${data.hiphop[1].imageSource}`);
                 }
                 else if(modalImg.id === 'harlow'){
-                    printGenreIdHere.textContent = 2;
                     songTitle.textContent = data.hiphop[2].title;
                     artist.textContent = data.hiphop[2].artist;
                     songSource.setAttribute('src', `${data.hiphop[2].musicSource}`);
                     playingImage.setAttribute('src', `${data.hiphop[2].imageSource}`);
                 }
                 else if(modalImg.id === 'industry-nasx'){
-                    printGenreIdHere.textContent = 3;
                     songTitle.textContent = data.hiphop[3].title;
                     artist.textContent = data.hiphop[3].artist;
                     songSource.setAttribute('src', `${data.hiphop[3].musicSource}`);
                     playingImage.setAttribute('src', `${data.hiphop[3].imageSource}`);
                 }
                 else{
-                    printGenreIdHere.textContent = 4;
                     songTitle.textContent = data.hiphop[4].title;
                     artist.textContent = data.hiphop[4].artist;
                     songSource.setAttribute('src', `${data.hiphop[4].musicSource}`);
@@ -347,35 +349,30 @@ let getAndUseMusicJson = fetch('./music.json').then((response)=>{
             }else if(modalImg.classList.contains('pop')){
                 printGenreIdHere.setAttribute('name','popMusic');
                 if(modalImg.id === 'mcclain'){
-                    printGenreIdHere.textContent = 0;
                     songTitle.textContent = data.popMusic[0].title;
                     artist.textContent = data.popMusic[0].artist;
                     songSource.setAttribute('src', `${data.popMusic[0].musicSource}`);
                     playingImage.setAttribute('src', `${data.popMusic[0].imageSource}`);
                 }
                 else if(modalImg.id === 'backstreetboys'){
-                    printGenreIdHere.textContent = 1;
                     songTitle.textContent = data.popMusic[1].title;
                     artist.textContent = data.popMusic[1].artist;
                     songSource.setAttribute('src', `${data.popMusic[1].musicSource}`);
                     playingImage.setAttribute('src', `${data.popMusic[1].imageSource}`);
                 }
                 else if(modalImg.id === 'normani'){
-                    printGenreIdHere.textContent = 2;
                     songTitle.textContent = data.popMusic[2].title;
                     artist.textContent = data.popMusic[2].artist;
                     songSource.setAttribute('src', `${data.popMusic[2].musicSource}`);
                     playingImage.setAttribute('src', `${data.popMusic[2].imageSource}`);
                 }
                 else if(modalImg.id === 'bedingfield'){
-                    printGenreIdHere.textContent = 3;
                     songTitle.textContent = data.popMusic[3].title;
                     artist.textContent = data.popMusic[3].artist;
                     songSource.setAttribute('src', `${data.popMusic[3].musicSource}`);
                     playingImage.setAttribute('src', `${data.popMusic[3].imageSource}`);
                 }
                 else{
-                    printGenreIdHere.textContent = 4;
                     songTitle.textContent = data.popMusic[4].title;
                     artist.textContent = data.popMusic[4].artist;
                     songSource.setAttribute('src', `${data.popMusic[4].musicSource}`);
@@ -384,35 +381,30 @@ let getAndUseMusicJson = fetch('./music.json').then((response)=>{
             }else{
                 printGenreIdHere.setAttribute('name','rb');
                 if(modalImg.id === 'nao'){
-                    printGenreIdHere.textContent = 0;
                     songTitle.textContent = data.rb[0].title;
                     artist.textContent = data.rb[0].artist;
                     songSource.setAttribute('src', `${data.rb[0].musicSource}`);
                     playingImage.setAttribute('src', `${data.rb[0].imageSource}`);
                 }
                 else if(modalImg.id === 'magic-riconasty'){
-                    printGenreIdHere.textContent = 1;
                     songTitle.textContent = data.rb[1].title;
                     artist.textContent = data.rb[1].artist;
                     songSource.setAttribute('src', `${data.rb[1].musicSource}`);
                     playingImage.setAttribute('src', `${data.rb[1].imageSource}`);
                 }
                 else if(modalImg.id === 'foushee'){
-                    printGenreIdHere.textContent = 2;
                     songTitle.textContent = data.rb[2].title;
                     artist.textContent = data.rb[2].artist;
                     songSource.setAttribute('src', `${data.rb[2].musicSource}`);
                     playingImage.setAttribute('src', `${data.rb[2].imageSource}`);
                 }
                 else if(modalImg.id === 'silksonic'){
-                    printGenreIdHere.textContent = 3;
                     songTitle.textContent = data.rb[3].title;
                     artist.textContent = data.rb[3].artist;
                     songSource.setAttribute('src', `${data.rb[3].musicSource}`);
                     playingImage.setAttribute('src', `${data.rb[3].imageSource}`);
                 }
                 else{
-                    printGenreIdHere.textContent = 4;
                     songTitle.textContent = data.rb[4].title;
                     artist.textContent = data.rb[4].artist;
                     songSource.setAttribute('src', `${data.rb[4].musicSource}`);
@@ -552,64 +544,56 @@ let getAndUseMusicJson = fetch('./music.json').then((response)=>{
         //looks at all the modal images that can be clicked on, adding another event listener to each of them
         if(printGenreIdHere.getAttribute('name') === 'alternative'){
             cycleThroughAltArray();
-            //console.log(printGenreIdHere.getAttribute('class'));
         }else if(printGenreIdHere.getAttribute('name') === 'popMusic'){
             cycleThroughPopMusicArray();
-            //console.log(printGenreIdHere.getAttribute('class'));
         }else if(printGenreIdHere.getAttribute('name') === 'hiphop'){
             cycleThroughHiphopArray();
-            //console.log(printGenreIdHere.getAttribute('class'));
         }else if(printGenreIdHere.getAttribute('name') === 'jazz'){
             cycleThroughJazzArray();
-            //console.log(printGenreIdHere.getAttribute('class'));
         }else{
             cycleThroughRbArray();
-            //console.log(printGenreIdHere.getAttribute('class'));
         }
     }
-    songSource.addEventListener('ended', checkGenre);
-
-    //NOTE: I wanna automate the skip, back, play/pause button
-    //i need to figure out how to control the progress bar/timer, if i can control that, if the user clicks rewind, i can just set the timer back to 0...
-
-
-
-
-    //NOTE: This is me trying to figure out how to set the counter based on the index position, number, the user is currently on
-
-    //let number = printGenreIdHere.textContent;
-    //let alternativeCounter = parseInt(number);
-    //set the array
-    //initialize a counter for that array, set it to 0
-    // let cycleThroughAltArray = ()=>{
-    //     console.log(`Song ${alternativeCounter} just played!`);
-    //     console.log(typeof alternativeCounter);
-    //     console.log(`${alternativeArray[alternativeCounter]}`);
-    //     alternativeCounter++;
-    //     console.log(`I just added 1 to the previous number`);
-    //     console.log(`${alternativeArray[alternativeCounter]}`);
-    //     let arrObj = alternativeArray[alternativeCounter];
-
-    //     songTitle.textContent = arrObj.title;
-    //     artist.textContent = arrObj.artist;
-    //     songSource.setAttribute('src', `${arrObj.musicSource}`);
-    //     playingImage.setAttribute('src', `${arrObj.imageSource}`);
-
-    //     if(alternativeCounter === alternativeArray.length){
-    //         alternativeCounter = 0;
-    //     }
-    // }
-
     //when the song ends, call the cycleThroughAltArrayFunction
     //songSource.addEventListener('ended', cycleThroughAltArray);
     //when the function is called, populate info to correspond to the counter
-        //what if i also set a number on each song 0-4, so depending on what number of the song is, corresponds to the counter number, that way, the loop can continue NOTE: COME BACK TO THIS THOUGHT
+    //what if i also set a number on each song 0-4, so depending on what number of the song is, corresponds to the counter number, that way, the loop can continue NOTE: COME BACK TO THIS THOUGHT
     //then add 1 to the counter
     //so...it'd look something like songSource.addEventListener('ended', cycleBasedOnGenre), cycleBasedOnGenre will be a function that checks the genre, then sends you to the corresponding function, ex: cycleThroughAltArray
+    songSource.addEventListener('ended', ()=>{
+        stopPulsate();
+        checkGenre();
+    });
+
+    //just for the heck of it, how would i go about doing a shuffle button, which shuffles all the songs?
+    //i'd create an array and push all of the individual genre items into them
+    let allSongsArray = [];
+    //get shuffle button
+    let shuffleButton = document.getElementById('shuffle-button');
+    alternativeArray.forEach(altSong => allSongsArray.push(altSong));
+    popMusicArray.forEach(popSong =>allSongsArray.push(popSong));
+    hiphopArray.forEach(hiphopSong => allSongsArray.push(hiphopSong));
+    jazzArray.forEach(jazzSong => allSongsArray.push(jazzSong));
+    rbArray.forEach(rbSong => allSongsArray.push(rbSong));
+    console.log(allSongsArray);
+
+    let cycleAllGenreArray = ()=>{
+        //create variable for a random number between 0 and 24, the possible index values of our allSongsArray
+        let randomIndex = Math.floor(Math.random() * (24 - 0 + 1) + 0);
+        let arrObj = allSongsArray[randomIndex];
+
+        //populate music container
+        songTitle.textContent = arrObj.title;
+        artist.textContent = arrObj.artist;
+        songSource.setAttribute('src', `${arrObj.musicSource}`);
+        playingImage.setAttribute('src', `${arrObj.imageSource}`);
+    }
+    shuffleButton.addEventListener('click', ()=>{
+        //whenever the shuffle button is clicked, it'll auto play, then generate another random song from the all songs array
+        songSource.setAttribute('autoplay', '');
+        cycleAllGenreArray();
+    });
+
 }).catch((err)=>{
     console.log('rejected', err);
 });
-
-        //to do that, the genre is already in its own array in the json file, just iterate through that array to autoplay the next song
-
-//keep your code clean and readable...

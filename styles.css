@@ -134,16 +134,35 @@ a{
 }
 .custom-audio-controls > div >i{
     font-size: 30px;
+    padding: 10px;
+    border-radius: 30%;
+    transition: 0.7s ease;
 }
 .custom-audio-controls >div >i:hover{
     cursor: pointer;
+    box-shadow: 0 3px 5px rgb(0, 0, 0);
+}
+
+.shuffle-container > i{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 30%;
+    transition: 0.7s ease;
+}
+.shuffle-container > i:hover{
+    cursor: pointer;
+    box-shadow: 0 3px 5px rgb(0, 0, 0);
 }
 
 .volume-container > i{
     font-size: 20px;
+    padding: 10px;
+    border-radius: 30%;
+    transition: 0.7s ease;
 }
 .volume-container > i:hover{
     cursor: pointer;
+    box-shadow: 0 3px 5px rgb(0, 0, 0);
 }
 
 .progress-bar-container{
@@ -165,11 +184,9 @@ a{
 .controls-with-volume{
     display: flex;
     justify-content: flex-start;
-    gap: 40px;
-    margin-left: 70px;
+    gap: 10px;
     margin-top: 10px;
     padding-top: 10px;
-    margin-right: 10px;
 }
 
 img{
@@ -180,8 +197,14 @@ img{
     border-width: 3px;
     border-color: rgba(0, 0, 0, 0.4);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+    transition: 0.7s ease;
 }
-
+img:hover{
+    box-shadow: 0 6px 8px rgba(0, 0, 0);
+}
+img.pulsate{
+    box-shadow: 0 10px 20px rgba(0, 0, 0);
+}
 
 .genre-modal-container{
     position: fixed;
