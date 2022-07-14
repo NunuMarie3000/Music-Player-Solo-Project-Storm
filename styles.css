@@ -84,49 +84,6 @@ a{
     background-color: #fff;
 }
 
-@media(max-width: 768px){
-
-    #hamburger-menu{
-        display: block;
-    }
-
-    #navbar-menu{
-        position: fixed;
-        right: -100%;
-        top: 90px;
-        gap: 0;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        z-index: 1;
-        background: linear-gradient(rgb(54, 5, 58), rgb(229, 26, 183));
-    }
-
-    .navbar-item{
-        margin: 16px 0;
-    }
-    #navbar-menu.active{
-        right: 0;
-    }
-
-    img{
-        height: 180px;
-        width: 150px;
-    }
-
-    .genre-modal-container.show{
-        right: 0%;
-    }
-}
-
-#music-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
-}
-
 .custom-audio-controls{
     display: flex;
     gap: 40px;
@@ -190,7 +147,7 @@ a{
 }
 
 img{
-    max-width: 400px;
+    max-width: auto;
     max-height: 300px;
     border-radius: 10%;
     border-style: solid;
@@ -289,7 +246,6 @@ img.pulsate{
 #player-container{
     margin-top: 20px;
 }
-
 #music-container{
     margin: 20px auto;
     padding: 0 10px;
@@ -297,6 +253,9 @@ img.pulsate{
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
     border-radius: 4%;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 audio{
     margin: auto auto 10px auto;
@@ -306,3 +265,48 @@ audio{
 #put-id-here{
     opacity: 0;
 }
+
+@media(max-width: 768px){
+    #hamburger-menu{
+        display: block;
+    }
+
+    #navbar-menu{
+        position: fixed;
+        right: -100%;
+        top: 90px;
+        gap: 0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        z-index: 1;
+        background: linear-gradient(rgb(54, 5, 58), rgb(229, 26, 183));
+    }
+
+    .navbar-item{
+        margin: 16px 0;
+    }
+    #navbar-menu.active{
+        right: 0;
+    }
+
+    img{
+        height: 180px;
+        width: auto;
+    }
+
+    .genre-modal-container.show{
+        right: 0%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #music-container{
+        background-color: rgba(255, 255, 255, 0);
+        box-shadow: none;
+    }
+
+    img{
+      width: auto;
+    }
+  }
