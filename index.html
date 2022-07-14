@@ -15,7 +15,6 @@
 
     <div id="app-container">
         <div id="main-container">
-            
             <div class="title">
                 <h1>Stormy Music <i class="fa-solid fa-music"></i></h1>
             </div>
@@ -181,21 +180,46 @@
             </div>
     
             <div id="music-container">
+
                 <div id="pic-container">
-                    <img id="playing-image" src="images/retro.webp" alt="Image corresponding to music" id="audio-pic">
+                    <img id="playing-image" src="./images/me-flower-advisory.jpg" alt="Image corresponding to music" id="audio-pic">
                 </div>
         
                 <div id="details-container">
-                    <h3 id="song-title">Stormy Music<i class="fa-solid fa-music"></i></h3>
+                    <h3 id="song-title">Stormy Music <i class="fa-solid fa-music"></i></h3>
                     <h4 id="artist">By Stormy</h4>
                 </div>
-    
+
                 <div id="player-container">
-                    <div id="progress-bar-container">
-                        <div id="progress-bar"></div>
+                    <div class="progress-bar-container">
+                        <div id="progress-bar">
+                        </div>
+                    </div>
+
+                    <div class="timer-container">
+                        <span id="current-time"></span>
+                        <span id="end-time"></span>
                     </div>
         
-                    <audio controls id="audio" type="audio/mpeg" src="">Your browser does not support Audio</audio>
+                    <audio  id="audio" type="audio/mpeg" src="">Your browser does not support Audio</audio>
+                    <div class="controls-with-volume">
+                        <div class="custom-audio-controls">
+                            <div class="back">
+                                <i id="rewind" class="fa-solid fa-backward"></i>
+                            </div>
+                            <div class="play/pause">
+                                <i id="play/pause" class="fa-solid fa-play"></i>
+                            </div>
+                            <div id="fastforward" class="skip">
+                                <i class="fa-solid fa-forward"></i>
+                            </div>
+                        </div>
+
+                        <div class="volume-container">
+                            <i id="volume/mute" class="fa-solid fa-volume-high"></i>
+                        </div>
+
+                    </div>
                 </div>
 
                 <div id="put-id-here" name="sample-name"></div>
@@ -203,7 +227,7 @@
     
     
         </div>
-    
+        
         <footer>&copy;StormyWeatherCreations, 2022</footer>
     </div>
 

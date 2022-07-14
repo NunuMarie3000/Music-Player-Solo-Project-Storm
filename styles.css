@@ -21,12 +21,12 @@ h1{
 #main-container{
     display: flex;
     flex-direction: column;
-    margin: 10vh 3vw 0 3vw;
+    margin: 4vh 2vw 0 2vw;
 }
 
 footer{
-    margin: 0 3vw 10vh 3vw;
-    padding: 2vh;
+    margin: 0 3vw 0 3vw;
+    padding: 2vh 0 0 0;
     color: rgba(255, 255, 255, 0.7);
     text-align: center;
 }
@@ -85,6 +85,7 @@ a{
 }
 
 @media(max-width: 768px){
+
     #hamburger-menu{
         display: block;
     }
@@ -124,6 +125,51 @@ a{
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
+}
+
+.custom-audio-controls{
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+.custom-audio-controls > div >i{
+    font-size: 30px;
+}
+.custom-audio-controls >div >i:hover{
+    cursor: pointer;
+}
+
+.volume-container > i{
+    font-size: 20px;
+}
+.volume-container > i:hover{
+    cursor: pointer;
+}
+
+.progress-bar-container{
+    width: 100%;
+    background-color: rgba(53, 5, 58, 0.283);
+
+}
+#progress-bar{
+    width: 1%;
+    height: 5px;
+    background-color: rgb(54, 5, 58);
+}
+
+.timer-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.controls-with-volume{
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+    margin-left: 70px;
+    margin-top: 10px;
+    padding-top: 10px;
+    margin-right: 10px;
 }
 
 img{
@@ -209,7 +255,7 @@ img{
 }
 
 #pic-container{
-    margin-top: 20px;
+    margin-top: 40px;
 }
 #details-container{
     margin-top: 20px;
@@ -232,4 +278,8 @@ img{
 audio{
     margin: auto auto 10px auto;
     padding: 0 5px;
+}
+
+#put-id-here{
+    opacity: 0;
 }
